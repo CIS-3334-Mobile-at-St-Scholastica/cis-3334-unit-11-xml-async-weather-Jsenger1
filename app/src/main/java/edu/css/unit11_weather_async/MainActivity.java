@@ -36,20 +36,20 @@ public class MainActivity extends AppCompatActivity {
         // Download the weather asynchronously
         AsyncWeatherDownloader.execute(this);
     }
-
+    // set the temp
     public void setTemp(String newTemp) {
         etTemp.setText(newTemp);
     }
-
+    // set the wind
     public void setWind(String newWind) {
         etWind.setText(newWind);
     }
-
+    // get location from the user
     public String getLocation() {
         return etLoc.getText().toString();
     }
 
-
+    // sends a toast message to the user telling them their status
     public void setStatus(String newStatus) {
         Toast toast=Toast.makeText(getApplicationContext(), newStatus,Toast.LENGTH_LONG );
         toast.show();
